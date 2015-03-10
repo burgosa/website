@@ -1,48 +1,40 @@
-<html>
-	<head>
-		<title>Laravel</title>
-		
-		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+@extends('app')
 
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 100%;
-				color: #B0BEC5;
-				display: table;
-				font-weight: 100;
-				font-family: 'Lato';
-			}
+@section('content')
+<div class="container">
+	<div class="row">
+	
+		<div class="col-md-8 col-md-offset-2 text-center">
 
-			.container {
-				text-align: center;
-				display: table-cell;
-				vertical-align: middle;
-			}
+			<h1> Hola </h1>
+			<br>
+			<h1><small> Bienvenido a tu supermercado </small></h1>
 
-			.content {
-				text-align: center;
-				display: inline-block;
-			}
-
-			.title {
-				font-size: 96px;
-				margin-bottom: 40px;
-			}
-
-			.quote {
-				font-size: 24px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
-			</div>
 		</div>
-	</body>
-</html>
+
+		<div class="col-md-4 col-md-offset-4 text-center">
+
+			<form role="form" method="POST" action="" accept-charset="UTF-8">
+				
+				<input type="hidden" name="_token" value="<% csrf_token() %>">
+
+				<div class="form-group">
+					{!! Form::select('category_id', [0 => 'Please Select One'] , 0 , ['class' => 'form-control input-lg']) !!}
+					
+				</div>
+
+				<button  ng-show="data.city.value == 1 || data.city.value == 2" data-loading-text="Entrando..." type="submit" ng-click="button()" class="btn btn-warning btn-lg btn-block">
+					Empezar a Comprar
+				</button>
+
+				<br>
+				<p class="text-center text-lg"> ¿Ya tienes una cuenta? <a href="<% URL::to('auth/login')%>">Entra</a></p>
+
+			</form>
+
+			
+		</div>
+
+	</div>
+</div>
+@endsection
