@@ -39,3 +39,11 @@ Route::controllers([
 ]);
 
 
+
+Route::get('home', function()
+
+{
+
+	return redirect('/');
+});
+
