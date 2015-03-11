@@ -21,7 +21,7 @@
 			    </div>
 			 </div>
 
-			 <?$i++; } ?>
+			 <?php $i++; } ?>
 
 		</div>
 		@endforeach
