@@ -1,60 +1,52 @@
-@extends('app')
+@extends('home')
 
 @section('content')
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
-				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li><% $error %></li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
 
-					<form class="form-horizontal" role="form" method="POST" action="<% url('/auth/login') %>">
-						<input type="hidden" name="_token" value="<% csrf_token() %>">
+		<div class="col-md-4 col-md-offset-4 text-center">
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="<% old('email') %>">
-							</div>
-						</div>
+			<h1> Bienvenido de nuevo </h1>
+			<h1><small> Entra a tu cuenta </small></h1>
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="remember"> Remember Me
-									</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">Login</button>
-
-								<a class="btn btn-link" href="<% url('/password/email') %>">Forgot Your Password?</a>
-							</div>
-						</div>
-					</form>
+			<br>
+			@if (count($errors) > 0)
+				<div class="alert alert-danger">
+					<p>
+						@foreach ($errors->all() as $error)
+							<% $error %>
+						@endforeach
+					</p>
 				</div>
-			</div>
+			@endif
+
+			<form  role="form" method="POST" action="<% url('/auth/login') %>">
+
+				<input type="hidden" name="_token" value="<% csrf_token() %>">
+
+				<div class="form-group">
+
+					<input type="email" class="form-control input-lg" name="email" placeholder="Email" value="<% old('email') %>">
+
+				</div>
+
+				<div class="form-group">
+
+					<input type="password" class="form-control input-lg" name="password" placeholder="Contraseña">
+
+				</div>
+
+				<button data-loading-text="Entrando..." type="submit" ng-click="button()" class="btn btn-warning btn-lg btn-block">
+					Entrar
+				</button>
+
+				<br>
+				<p class="text-center text-lg"> ¿Todavía no tienes una cuenta? <a href="/">Registrate</a></p>
+				<p class="text-center text-lg"> ¿Olvidaste tu contraseña? <a href="<% url('/password/email') %>">Haz click aqui</a></p>
+
+				
+			</form>
+
 		</div>
 	</div>
 </div>

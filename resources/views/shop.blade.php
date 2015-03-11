@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 @section('head')
@@ -21,7 +22,6 @@
 </head>
 @show
 <body>
-	<!--
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -39,7 +39,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href="<% url('/') %>">Home</a></li>
 				</ul>
-				
+				-->
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
@@ -56,20 +56,6 @@
 			</div>
 		</div>
 	</nav>
-	-->
-	<br><br>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-6">
-				<h3>Brand</h3>
-			</div>
-			<div class="col-xs-6 text-right">
-				<h3><a href="<% URL::to('entra')%>" class="btn btn-success"> Entra </a></h3>
-			</div>
-		</div>
-	</div>
-	<br><br>
-
 
 	@yield('content')
 

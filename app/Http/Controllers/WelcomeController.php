@@ -1,5 +1,15 @@
 <?php namespace App\Http\Controllers;
 
+//services
+use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
+
+//models and Requests
+use App\City;
+use App\Http\Requests;
+use \Session;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -31,6 +41,36 @@ class WelcomeController extends Controller {
 	public function index()
 	{
 		return view('welcome');
+	}
+
+	public function entra()
+	{
+		return view('auth.login');
+	}
+
+	public function postCity(Requests\SelectCityRequest $request)
+	{
+		if($request->city == 0) return redirect()->back()->withErrors(['Elige Tu Ciudad']);
+
+		$city = City::find($request->city);
+
+		return view('auth.register')->with('city_name',$city->name);
+	}
+
+
+	public function register()
+	{
+		if(old('city')){
+
+			$city = old('city');
+			
+		}else{
+
+			return redirect('/');
+		}
+
+
+		return view('auth.register')->with('city_name',$city);;
 	}
 
 }
