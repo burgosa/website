@@ -14,18 +14,28 @@ Blade::setEscapedContentTags('<%%', '%%>');   // for escaped data
 |
 */
 
+//Route::get('/home', 'HomeController@index');
+
+Route::get('/', 'WelcomeController@index');
+Route::get('/entra', 'WelcomeController@entra');
 
 
+Route::post('/registrate', 'WelcomeController@postCity');
+Route::get('/registrate', 'WelcomeController@register');
 
-Route::get('/home', 'HomeController@index');
 
+Route::group(['prefix' => '/tienda'], function()
+{
+
+	Route::get('/', 'ShopController@index');
+	
+
+
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('/', 'WelcomeController@index');
-Route::get('/entra', 'WelcomeController@entra');
-Route::post('/registrate', 'WelcomeController@postCity');
-Route::get('/registrate', 'WelcomeController@register');
+
