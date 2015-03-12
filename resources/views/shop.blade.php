@@ -40,6 +40,8 @@
 	          	 			<li class="dropdown-submenu">
 								<a tabindex="-1" href="<% URL::to('tienda/'.$category->slug) %>">  <% $category->name %> </a>
 								<ul class="dropdown-menu">
+									<li><a tabindex="-1" href="<% URL::to('tienda/'.$category->slug) %>"><% $category->name %></a></li>
+									<li class="divider"></li>
 								@foreach($category->subcategories as $subcategory)
 									<li><a tabindex="-1" href="<% URL::to('tienda/'.$category->slug.'/'.$subcategory->slug) %>"><% $subcategory->name %></a></li>
 								@endforeach

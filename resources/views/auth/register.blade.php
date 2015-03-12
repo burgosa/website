@@ -26,6 +26,7 @@
 				<input type="hidden" name="_token" value="<% csrf_token() %>">
 
 				<input type="hidden" name="city" value="<% $city_name %>">
+				<input type="hidden" name="remember" value="1">
 
 				<div class="form-group">
 				
