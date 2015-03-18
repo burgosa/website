@@ -28,9 +28,9 @@ Route::group(['prefix' => '/tienda'], function()
 {
 
 	Route::get('/', 'ShopController@index');
+	Route::get('/{cat1}', 'ShopController@cat1');
+	Route::get('/{cat1}/{cat2}', 'ShopController@cat2');
 	
-
-
 });
 
 Route::controllers([

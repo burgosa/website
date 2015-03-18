@@ -12,6 +12,17 @@ class Category extends Model {
         return $this->hasMany('App\Category');
     }
 
+    public function parentcategories()
+    {   
+        return $this->hasOne('App\Category','id', 'category_id');
+    }
+
+    public function products()
+    {   
+        return $this->belongsToMany('App\Product','categories_products')->withPivot('product_id', 'category_id');
+
+    }
+
     public function scopeTop($query)
     {
         return $query->where('category_id', '=', 1);

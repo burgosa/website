@@ -43,10 +43,28 @@ class ShopController extends Controller {
 	public function index()
 	{
 
-		$data['city'] = Auth::user()->city;
-		$data['categories'] = Category::where('category_id',1)->get();
+		
+		$data['root_categories'] = Category::where('category_id',1)->get();
+		
+		return view('shop.index', $data);
+	}
 
-		return view('store.index', $data);
+	public function cat1($cat1)
+	{
+
+		$data['root_categories'] = Category::where('category_id',1)->get();			
+		$data['categories'] = Category::where('slug',$cat1)->get();
+
+		return view('shop.category', $data);
+	}
+
+	public function cat2($cat1,$cat2)
+	{
+
+		$data['root_categories'] = Category::where('category_id',1)->get();
+		$data['categories'] = Category::where('slug',$cat2)->get();
+
+		return view('shop.subcategory', $data);
 	}
 
 }

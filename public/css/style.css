@@ -1,10 +1,12 @@
 body{
 
+    background-color: #fcfcfc;
     margin-top: 110px;
     z-index: -1000;
 }
-.second-nav{
 
+
+.second-nav{
     margin-top: 51px;
 }
 .dropdown-submenu {

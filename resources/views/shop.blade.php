@@ -6,14 +6,15 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Brand</title>
 
-	<link href="<% asset('/css/app.css') %>" rel="stylesheet">
-	<link href="<% asset('/css/style.css') %>" rel="stylesheet">
+	<link rel="stylesheet" href="<% asset('/plugins/bootstrap/css/bootstrap.min.css') %>" type='text/css'>
+	<link href="<% asset('/css/app.css') %>" rel="stylesheet" type='text/css'>
+	<link href="<% asset('/css/style.css') %>" rel="stylesheet" type='text/css'>
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<% asset('/plugins/font-awesome/css/font-awesome.min.css') %>" type='text/css'>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,13 +31,14 @@
 	 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      		<ul class="nav navbar-nav">
+	      	<ul class="nav navbar-nav">
 	   
 	        		<li class="dropdown">
 	          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-bars"></i> Categorias</a>
+	          			
 	          			<ul class="dropdown-menu" role="menu">
 
-	          			@foreach($categories as $category)
+	          			@foreach($root_categories as $category)
 	          	 			<li class="dropdown-submenu">
 								<a tabindex="-1" href="<% URL::to('tienda/'.$category->slug) %>">  <% $category->name %> </a>
 								<ul class="dropdown-menu">
@@ -51,7 +53,31 @@
 
 	          			</ul>
 	        		</li>
+
 	     		</ul>
+
+
+	     		<div style="margin-right: 0px"class="btn-group navbar-btn navbar-right">
+			  		<button type="button" class="btn btn-danger">$ 0.00</button>
+			  		<button type="button" class="btn btn-warning">Checkout</button>
+			  		
+				</div>
+
+
+	     		<ul class="nav navbar-nav navbar-right">
+					
+					<li class="dropdown">
+		          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="caret"></span>  <i class="fa fa-shopping-cart"></i> 0</a>
+		          	<ul class="dropdown-menu" role="menu">
+		            	<li><a href="#">Your Items</a></li>
+		            
+		          	</ul>
+		        	</li>
+						
+
+				</ul>
+
+				
 	 
 	    	</div><!-- /.navbar-collapse -->
 	  	</div><!-- /.container-fluid -->
@@ -66,14 +92,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Brand</a>
+				<a class="navbar-brand" href="/tienda">Brand</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				
 				<ul class="nav navbar-nav">
 
-					<li><a href="<% url('/') %>"><i class="fa fa-location-arrow"></i> <% $city %></a></li>
+					<li><a href="<% url('/') %>"><i class="fa fa-location-arrow"></i> <% Auth::user()->city %></a></li>
 				
 				</ul>
 
@@ -102,15 +128,12 @@
 		</div>
 	</nav>
 
-
-
-
 	@yield('content')
 
 	@section('footer')
 	<!-- Scripts -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="<% asset('/plugins/jquery/jquery-2.1.3.min.js') %>"></script>
+	<script src="<% asset('/plugins/bootstrap/js/bootstrap.min.js') %>"></script>
 	@show
 </body>
 </html>
