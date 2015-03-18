@@ -1,3 +1,5 @@
+
+/* Body */
 body{
 
     background-color: #fcfcfc;
@@ -5,6 +7,12 @@ body{
     z-index: -1000;
 }
 
+
+/*helpers*/
+.auto-widht{
+
+    width: 100%;
+}
 
 .second-nav{
     margin-top: 51px;

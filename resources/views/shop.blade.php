@@ -12,8 +12,8 @@
 	<link href="<% asset('/css/app.css') %>" rel="stylesheet" type='text/css'>
 	<link href="<% asset('/css/style.css') %>" rel="stylesheet" type='text/css'>
 
-	<!-- Fonts -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<!-- Fonts 
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>-->
 	<link rel="stylesheet" href="<% asset('/plugins/font-awesome/css/font-awesome.min.css') %>" type='text/css'>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -93,8 +93,9 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="/tienda">Brand</a>
-			</div>
 
+			</div>
+			
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				
 				<ul class="nav navbar-nav">
@@ -103,12 +104,17 @@
 				
 				</ul>
 
-				<form class="navbar-form navbar-left" role="search">
-				  	<div class="form-group">
-				    	<input type="text" name="search" class="form-control" placeholder="">
-				  	</div>
-				  	<button type="submit" class="btn btn-default">Buscar</button>
-				</form>
+			
+		        	<form class="navbar-form navbar-left" style="width:500px" role="search">
+		          	<div class="input-group auto-widht">
+		            	<input type="text" class="form-control" placeholder="Buscar" name="buscar">
+		            	<div class="input-group-btn">
+		              		<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+		            	</div>
+		          	</div>
+		        	</form>
+		
+
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
