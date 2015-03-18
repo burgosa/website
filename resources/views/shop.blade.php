@@ -53,11 +53,14 @@
 
 	          			</ul>
 	        		</li>
+	        		<li><a href="/"><i class="fa fa-home"></i> 1 icon </a></li>
+	        		<li><a href="/"><i class="fa fa-home"></i> 2 icon </a></li>
+	        		<li><a href="/"><i class="fa fa-home"></i> 3 icon </a></li>
 
 	     		</ul>
 
 
-	     		<div style="margin-right: 0px"class="btn-group navbar-btn navbar-right">
+	     		<div style="margin-left:10px; margin-right: 0px"class="btn-group navbar-btn navbar-right">
 			  		<button type="button" class="btn btn-danger">$ 0.00</button>
 			  		<button type="button" class="btn btn-warning">Checkout</button>
 			  		
@@ -105,7 +108,7 @@
 				</ul>
 
 			
-		        	<form class="navbar-form navbar-left" style="width:500px" role="search">
+		        	<form class="navbar-form navbar-left" style="width:700px" role="search">
 		          	<div class="input-group auto-widht">
 		            	<input type="text" class="form-control" placeholder="Buscar" name="buscar">
 		            	<div class="input-group-btn">
