@@ -15,17 +15,16 @@
 				@foreach($subcat->products as $product)
 				
 					<div class="col-sm-4 col-md-2">
-			    
-					    <img class="img-responsive" src="http://placehold.it/400x400" alt="<% $product->name %>">
+			    		
+			    		<div class="media">
+						    <img class="img-responsive" src="http://placehold.it/400x400" alt="<% $product->name %>">
 
-					    <div class="text-center">
-				        	<h5><% $product->name %></h5>
-				        	<p><% $product->price %></p>
-				        	<p>
-				        		<a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#myModal" role="button">Button</a>
-				        		<a href="#" class="btn btn-sm btn-default" role="button">Button</a>
-				        	</p>
-					    </div>
+						    <div class="text-center">
+					        	<h5><% $product->name %></h5>
+					        	<p><% $product->price %></p>
+					        	
+						    </div>
+						</div>
 					    
 					</div>
 
