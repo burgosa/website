@@ -21,6 +21,8 @@ Route::get('/entra', 'WelcomeController@entra');
 
 Route::get('/mock', 'WelcomeController@mock');
 
+Route::get('/mock/cart', 'WelcomeController@mockcart');
+
 
 Route::post('/registrate', 'WelcomeController@postCity');
 Route::get('/registrate', 'WelcomeController@register');

@@ -4,7 +4,7 @@
 .supermaket-info{
 
 	
-	background-color: #005EA8;
+	background-color: #fff;
 	padding-top: 30px;
 	padding-bottom: 30px;
 
@@ -14,8 +14,8 @@
 
 
 	border-radius: 6px;
-  	background: url(../img/olimpica.png);
-  	height: 80px;
+  	background: url(../img/grastronomy.png);
+  	height: 110px;
   	width: 400px;
   	background-size: contain;
   	background-size: contain;
@@ -32,7 +32,7 @@
 
 .supermaket-info .availability > a{
 
-	color: #ECECEC;
+	color: #6c6c6c;
 	cursor: pointer;
 	font-size: 16px;
 
@@ -40,14 +40,14 @@
 
 .supermaket-info .availability > a:hover{
 
-	color: #fff;
+	color: #6c6c6c;
 	text-decoration: none;
 
 }
 
 #supermarket-info-modal .modal-header{
 
-	background-color: #005EA8;
+	background-color: #fff;
 	border-bottom: none;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;

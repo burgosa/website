@@ -45,6 +45,13 @@ class WelcomeController extends Controller {
 		return view('mock');
 	}
 
+
+	public function mockcart()
+	{
+		return view('mockcart');
+	}
+
+
 	public function index()
 	{
 		return view('welcome');
