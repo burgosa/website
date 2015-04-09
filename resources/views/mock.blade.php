@@ -261,7 +261,7 @@
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                 <div class="product-image">
 
-                                    <div class="product-image-wraper"><img src="img/desodorante.jpg" class="img-responsive img"></div>
+                                    <div class="product-image-wraper"><img src="/img/desodorante.jpg" class="img-responsive img"></div>
 
                                 </div>
 
@@ -314,7 +314,7 @@
 
                     <li class="item">
 
-                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="img/product.jpg" class="img-responsive img"></div>
+                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="/img/product.jpg" class="img-responsive img"></div>
 
                          <div class="addtocart">
                             <button class="btn btn-success"><i class="fa fa-minus"></i></button><button class="btn btn-success"><i class="fa fa-plus"></i> Añadir</button>
@@ -332,7 +332,7 @@
                     </li>
                     <li class="item">
 
-                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="img/oats.jpg" class="img-responsive img"></div>
+                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="/img/oats.jpg" class="img-responsive img"></div>
 
                          <div class="addtocart">
                             <button class="btn btn-success"><i class="fa fa-minus"></i></button><button class="btn btn-success"><i class="fa fa-plus"></i> Añadir</button>
@@ -350,7 +350,7 @@
                     </li>
                     <li class="item">
 
-                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="img/blue.jpg" class="img-responsive img"></div>
+                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="/img/blue.jpg" class="img-responsive img"></div>
 
                         <div class="addtocart">
                             <button class="btn btn-success"><i class="fa fa-minus"></i></button><button class="btn btn-success"><i class="fa fa-plus"></i> Añadir</button>
@@ -368,7 +368,7 @@
                     </li>
                     <li class="item">
 
-                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="img/cheerios.jpg" class="img-responsive img"></div>
+                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="/img/cheerios.jpg" class="img-responsive img"></div>
 
                          <div class="addtocart">
                             <button class="btn btn-success"><i class="fa fa-minus"></i></button><button class="btn btn-success"><i class="fa fa-plus"></i> Añadir</button>
@@ -386,7 +386,7 @@
                     </li>
                     <li class="item">
 
-                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="img/leche.jpg" class="img-responsive img"></div>
+                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="/img/leche.jpg" class="img-responsive img"></div>
 
                          <div class="addtocart">
                             <button class="btn btn-success"><i class="fa fa-minus"></i></button><button class="btn btn-success"><i class="fa fa-plus"></i> Añadir</button>
@@ -404,7 +404,7 @@
                     </li>
                      <li class="item">
 
-                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="img/bread.jpg" class="img-responsive img"></div>
+                        <div class="media" data-toggle="modal" data-target="#product-info-modal"><img src="/img/bread.jpg" class="img-responsive img"></div>
 
                          <div class="addtocart">
                             <button class="btn btn-success"><i class="fa fa-minus"></i></button><button class="btn btn-success"><i class="fa fa-plus"></i> Añadir</button>
@@ -471,7 +471,7 @@
                                 <div>2</div>
                             </td>
                             <td class="image item-clickable">
-                                <img src="img/bread.jpg">
+                                <img src="/img/bread.jpg">
                             </td>
                             <td class="name">
                                 <span class="item-clickable">Pan Integral de Trigo - Oroweat</span>
@@ -491,7 +491,7 @@
                                 <div>1</div>
                             </td>
                             <td class="image item-clickable">
-                                <img src="img/blue.jpg">
+                                <img src="/img/blue.jpg">
                             </td>
                             <td class="name">
                                 <span class="item-clickable">Cereales de Arandano</span>
