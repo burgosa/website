@@ -198,7 +198,7 @@
                             </div>
                             <div class="modal-body text-left">
 
-                                <p class="supermarket-description"> Olimpica es uno de los mejores supermercados de Bogotá. Aqui podras encontrar muchas cosas </p>
+                                <p class="supermarket-description"> Gastronomy es uno de los mejores supermercados de Bogotá. Aqui podras encontrar muchas cosas </p>
                                 
                             </div>
                             <div class="modal-footer ">
