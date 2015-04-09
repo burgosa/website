@@ -19,6 +19,8 @@ Blade::setEscapedContentTags('<%%', '%%>');   // for escaped data
 Route::get('/', 'WelcomeController@index');
 Route::get('/entra', 'WelcomeController@entra');
 
+Route::get('/mock', 'WelcomeController@mock');
+
 
 Route::post('/registrate', 'WelcomeController@postCity');
 Route::get('/registrate', 'WelcomeController@register');

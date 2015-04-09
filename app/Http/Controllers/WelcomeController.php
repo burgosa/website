@@ -38,6 +38,13 @@ class WelcomeController extends Controller {
 	 *
 	 * @return Response
 	 */
+
+
+	public function mock()
+	{
+		return view('mock');
+	}
+
 	public function index()
 	{
 		return view('welcome');

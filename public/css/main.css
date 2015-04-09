@@ -1,0 +1,40 @@
+body{
+	font-family: 'Lato', sans-serif;
+	color: #393939;
+	background-color: #FCFCFC;
+}
+
+.container{
+
+  width: 1245px;
+  min-width: 1000px;
+
+}
+
+.soft{
+
+  color: #868686;
+}
+
+.special{
+
+  color: #01939A;
+}
+
+.content{
+
+margin-top: 100px;
+
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0 0 10px 25px;
+}
+
+ul.unstyled, ol.unstyled {
+
+  margin-left: 0;
+  list-style: none;
+
+}

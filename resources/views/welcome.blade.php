@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+
 	<div class="row">
 
 		<?php $select_array = App\City::where('is_active',1)->lists('name','id') ?>
@@ -50,5 +51,6 @@
 		</div>
 
 	</div>
+	
 </div>
 @endsection
